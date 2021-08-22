@@ -5,6 +5,11 @@ $('.burger-btn').on('click',function(){
   $('body').toggleClass('noscroll');
 });
 
+$('.nav-item a').on('click',function(){
+  $('.nav-wrapper').fadeOut();
+  $('.burger-btn').removeClass('close');
+});
+
 $('a[href^="#form"]').click(function() {
   // スクロールの速度
   let speed = 400; // ミリ秒で記述
