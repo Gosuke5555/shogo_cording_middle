@@ -9,6 +9,7 @@ body {
   color: #333333;
   font-size: 1.6rem;
   font-weight: bold;
+  overflow-x: hidden;
 }
 
 li {
@@ -42,7 +43,7 @@ img {
   font-weight: bold;
   color: #FFFFFF;
   padding: 12px 35px;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   ackground-image: -webkit-gradient(linear, left top, right top, from(#FA41CC), to(#6020B0));
   background-image: -webkit-gradient(linear, left top, right top, from(#FA41CC), to(#6020B0));
   background-image: linear-gradient(to right, #FA41CC 0%, #6020B0 100%);
@@ -168,6 +169,14 @@ img {
 }
 
 .top-visual {
+  background-image: url(./img/daenkei.png);
+  background-position: top -110px right -110px;
+  background-position-x: right -110px;
+  background-position-y: top -110px;
+  background-repeat: no-repeat;
+}
+
+.top-wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding-top: 262px;
@@ -186,7 +195,6 @@ img {
   top: 0%;
   right: -25%;
   z-index: -10;
-  overflow: hidden;
 }
 
 .catch-copy-wrapper {
@@ -279,6 +287,7 @@ img {
 }
 
 table {
+  max-width: 90%;
   margin: 0 auto;
   background-color: #FFFFFF;
   border-collapse: collapse;
@@ -311,13 +320,12 @@ table td:nth-child(2) {
 .ac-parent {
   position: relative;
   /* 追加 */
-  height: 58px;
   border: 1px solid #E5E5E5;
   background-color: #FFFFFF;
   color: #333333;
   text-align: center;
-  line-height: 50px;
   cursor: pointer;
+  padding: 20px 0 20px 0;
 }
 
 .ac-child {
@@ -473,15 +481,16 @@ table td:nth-child(2) {
   display: block;
 }
 
-.form-group input {
-  width: 500px;
+.input-text {
+  width: 400px;
   height: 43px;
   background-color: #EEFBFB;
   margin: 36px 0 26px 0;
 }
 
-.form-group textarea {
-  width: 783px;
+textarea {
+  display: block;
+  width: 100%;
   background-color: #EEFBFB;
   resize: none;
   margin: 36px 0 26px 0;
@@ -599,6 +608,9 @@ table td:nth-child(2) {
     padding: 10px;
     max-width: 100%;
   }
+  .header-inner {
+    max-width: 100%;
+  }
   .header-logo img {
     width: 30px;
     height: 30px;
@@ -649,7 +661,7 @@ table td:nth-child(2) {
     width: 100%;
     height: 50%;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
   }
   .nav-list {
     display: block;
@@ -658,7 +670,6 @@ table td:nth-child(2) {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    text-align: left;
   }
   .header-nav.nav-item {
     margin-right: 0;
@@ -671,15 +682,18 @@ table td:nth-child(2) {
   body.noscroll {
     overflow: hidden;
   }
-  .catch-copy-title {
-    font-size: 2.8rem;
-  }
   .top-visual {
+    padding: 0;
+  }
+  .top-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 150px 10px 50px 10px;
+    padding: 150px 0 0 0;
+  }
+  .catch-copy-title {
+    font-size: 2.8rem;
   }
   .catch-copy-wrapper {
     margin: 0 auto;
@@ -716,6 +730,7 @@ table td:nth-child(2) {
   }
   .ac {
     font-size: 1.2rem;
+    width: 90%;
   }
   .price-table td {
     padding: 40px 10px 35px 10px;
@@ -732,13 +747,10 @@ table td:nth-child(2) {
   }
   .form-wrapper {
     padding: 18px 10px;
-    width: 330px;
+    margin: 0 20px;
   }
-  .form-group input {
-    max-width: 300px;
-  }
-  .form-group textarea {
-    max-width: 300px;
+  .input-text {
+    width: 90%;
   }
   .footer-attend {
     -webkit-box-orient: vertical;
